@@ -1,0 +1,34 @@
+<!doctype html><html>
+<head>
+<title>Assignment 14</title>
+    
+    <script>
+        var change = 0;
+        function slideShow(){
+            
+            change++;
+            if(change==2)
+                {
+                    document.getElementById("first").src="cq5dam.web.1200.675.jpeg";
+                }
+            if(change==3)
+                {
+                    document.getElementById("first").src="game_of_thrones_queens_justice_review_dany.jpg";
+                }
+            if(change==4)
+                {
+                    document.getElementById("first").src="natalie-dormer-in-game-of-thrones-hd-wallpaper-01.jpg";
+                }
+            if(change==5)
+                {
+                    document.getElementById("first").src="images.jpg";
+                }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <img id="first" src="The-Crown-–-Game-of-Thrones-Wallpaper-HD.jpg" onclick="slideShow()">
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Assignment 16</title>
+<script>
+    
+            var j=0;
+            var x = new Array();
+            var y = new Array();
+            var xc = 750;
+            var yc = 400;
+            var r = 200;
+            var i=0;    
+            for(i=0 ; i<=360 ; i+=10)
+                {
+                    
+                    x[i] = Math.floor(xc+r*Math.cos((Math.PI*i)/180));
+                    y[i] = Math.floor(yc+r*Math.sin((Math.PI*i)/180));
+                    
+                }
+   
+    
+ 
+
+function disp(j){
+xi= x[j];
+document.getElementById('i1').style.left= xi + "px"; 
+yi= y[j];
+document.getElementById('i1').style.top= yi + "px"; 
+
+return (j+10);
+}
+
+function timer(){
+    j=disp(j);
+    if(j>360)
+        {
+            j=0;
+        }
+    else{
+        j=disp(j);
+    }
+
+var yi=document.getElementById('i1').offsetTop;
+var xi=document.getElementById('i1').offsetLeft;
+document.getElementById("msg").innerHTML="X: " + xi  + " Y : " + yi;
+my_time=setTimeout('timer()',500);
+}
+
+
+
+</script>
+</head>
+<body >
+   
+<img src=marble3.jpg id='i1' style="position:absolute; left: 750; top: 400;">
+<br><br><br><br>
+<input type=button onClick=timer() value='Start'>
+    
+    <div id="msg"></div>
+    </body>
+</html>
